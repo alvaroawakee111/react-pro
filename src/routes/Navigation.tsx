@@ -18,7 +18,6 @@ export const Navigation = () => {
         <div className="main-layout">
           <nav>
             <img src={logo} alt="react-logo" />
-
             <ul>
               {routes.map(({ to, name }) => (
                 <li key={to}>
