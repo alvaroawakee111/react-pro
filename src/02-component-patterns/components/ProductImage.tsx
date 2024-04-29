@@ -16,12 +16,11 @@ export const ProductImage = ({ img = "", className, style }: Props) => {
   if (img) imgToShow = img;
   else if (product.img) imgToShow = product.img;
   else imgToShow = noImage;
-
   return (
     <img
       className={`${styles.productImg} ${className}`}
       style={style}
-      src={img ? img : noImage}
+      src={imgToShow ? imgToShow : noImage}
       alt="Product"
     />
   );

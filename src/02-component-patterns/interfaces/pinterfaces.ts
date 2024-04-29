@@ -8,6 +8,13 @@ export interface ProductCardProps {
   children?: ReactElement | ReactElement[];
   className?: string;
   style?: React.CSSProperties;
+  onChange?: (args: onChangeArgs) => void;
+  value?: number;
+}
+
+export interface onChangeArgs {
+  product: Product;
+  count: number;
 }
 
 export interface Product {
@@ -27,6 +34,9 @@ export interface ProductContextProps {
 //   counter: number;
 // } Ya no se necesita con el context
 
+export interface ProductIntCart extends Product {
+  count: number;
+}
 export interface ProductCardHOCProps {
   ({ product, children }: ProductCardProps): JSX.Element;
   Title: (Props: ProductTitleProps) => JSX.Element;
